@@ -1,7 +1,7 @@
 #ifndef _ADT_LIST_XIANXING_
 #define _ADT_LIST_XIANXING_
-#define LIST_SIZE_INIT 100
-#define LIST_SIZE_INCREMENT 10
+#define LIST_SIZE_INIT (int)100
+#define LIST_SIZE_INCREMENT (int)10
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>

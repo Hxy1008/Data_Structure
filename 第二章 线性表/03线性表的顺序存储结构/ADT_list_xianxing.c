@@ -1,5 +1,5 @@
-#define LIST_SIZE_INIT 100
-#define LIST_SIZE_INCREMENT 10
+#define LIST_SIZE_INIT (int)100
+#define LIST_SIZE_INCREMENT (int)10
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
@@ -19,13 +19,13 @@ typedef Ptr SqListPtr;
 Status List_Init(SqListPtr L)
 {
 	Status s = fail;
-	if (L == NULL) {
-		L->elem = (ElemType*)malloc(sizeof(ElemType) * (LIST_SIZE_INIT + 1)); //为了从第一个位置开始存
-	}
-	if (L->elem) {
-		L->list_size = LIST_SIZE_INIT;
-		L->length = 0;
-		s = success;
+	if (L) {
+		L->elem = (ElemType*)malloc(sizeof(ElemType) * (LIST_SIZE_INIT + 1));//为了从第一个位置开始存
+		if (L->elem) {
+			L->list_size = LIST_SIZE_INIT;
+			L->length = 0;
+			s = success;
+		}
 	}
 }
 /*  删除链表  */
